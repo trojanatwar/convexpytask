@@ -27,7 +27,10 @@ def sum_premiums(n):
 
 
 if __name__ == "__main__":
-    n = int(sys.argv[-1])
+    try:
+        n = int(sys.argv[-1])
+    except ValueError:
+        sys.exit("Invalid Input. Must be Numeric.")
     s1, s2 = sum_premiums(n)
     print('Sum of Premium from list 1: {}'.format(s1))
     print('Sum of Premium from list 2: {}'.format(s2))
